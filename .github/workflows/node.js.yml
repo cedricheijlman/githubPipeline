@@ -1,0 +1,25 @@
+name: Node.js CI
+
+on:
+  push:
+    branches:
+      - main  # Voer de actie uit bij elke push naar de main branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2  # Haal de code van de repository op
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'  # Installeer de juiste Node.js-versie
+
+    - name: Install dependencies
+      run: npm install  # Installeer projectafhankelijkheden
+
+    - name: Run tests
+      run: npm test  # Voer je tests uit
