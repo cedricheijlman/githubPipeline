@@ -7,7 +7,7 @@ describe("GET /", () => {
       .get("/")
       .expect("Content-Type", /text/)
       .expect(200)
-      .expect("Hello, World!", done); // Controleer of de response "Hello, World!" is
+      .expect("Hello,s World!", done); // Controleer of de response "Hello, World!" is
   });
 });
 
