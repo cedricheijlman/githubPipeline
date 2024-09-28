@@ -4,7 +4,7 @@ const port = 3000;
 
 // Route die 'Hello, World!' retourneert
 app.get("/", (req, res) => {
-  res.send("Hello, World!");
+  res.send("Hello,s World!");
 });
 
 // Nieuwe route die twee getallen bij elkaar optelt
